@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chat page for {{ username }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <h1>Welcome, {{ username }}</h1>
@@ -13,6 +14,7 @@
         <textarea cols="50" rows="4" name="message" id="message"></textarea>
         <br>
         <button>Send message</button>
+        <button>Clear chat</button>
     </form>
     
     {% for message in chat_messages %}
